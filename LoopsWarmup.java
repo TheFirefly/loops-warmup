@@ -2,23 +2,39 @@ public class LoopsWarmup {
 
 
 	public static void main(String[] args) {
-		//summation(10);
-		exponent(2,10);
+		int sum = summation(10);
+		int exp = exponent(2,10);
+		int fact = factorial(5);
+
+		System.out.println("Summation of 10: " + sum);
+		System.out.println("2^10: " + exp);
+		System.out.println("5!: " + fact);
 	}
 
-	private static void summation(int n) {
+	private static int summation(int n) {
 		int sum = 0;
 		for (int i = 1 ; i <= n ; i++) {
 			sum += i;
 		}
-		System.out.println("Sum: " + sum);
+
+		return sum;
 	}
 
-	private static void exponent(int x, int n) {
+	private static int exponent(int x, int n) {
 		int newX = 1;
 		for (int i = 1 ; i <= n ; i++) {
 			newX *= x;
 		}
-		System.out.println(x + "^" + n + ": " + newX);
+
+		return newX;
+	}
+
+	private static int factorial(int n) {
+		int nFact = 1;
+		for (int i = 1 ; i <= n ; i++) {
+			nFact *= i;
+		}
+
+		return nFact;
 	}
 }
